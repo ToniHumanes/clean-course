@@ -8,6 +8,81 @@
   </head>
   <body>
     <div id="app"></div>
+    <main class="wrapper">
+      <h2>Deuda técnica</h2>
+      <p>La deuda técnica se la falta de calidad en el código que escribimos y repercute en el coste (tiempo, dinero) futuro </p>
+      <h2>Esquema de deuda técnica de Martin Fowler</h2>
+      <ul>
+        <li><h3>Imprudente:</h3> "No hay tiempo, solo copia y pega eso"</li>
+        <li><h3>Inadvertida:</h3> "¿Qué son los patrones de diseño?"</li>
+        <li><h3>Prudente:</h3> "Tenemos que entregar rápido, ya refactorizaremos"</li>
+        <li><h3>Prudente e Inadvertida:</h3> "Ahora sabemos como lo deberiamos haber hecho"</li>
+      </ul>
+      <h2>¿Cómo se paga la deuda técnica?</h2>
+      <h3>Refactorización</h3>
+      <p>Es un proceso que tiene como objetivo mejorar el código sin alterar su comportamiento para que sea más entendible y tolerante a cambios, las pruebas unitarias o automaticas son imprescindibles en estos procesos.</p>
+      <hr>
+      <h2>Nombres pronunciables y expresivos</h2>
+      <ul>
+        <li>Variables en inglés</li>
+        <li>Las variables deben indicar que cosa van a guardar</li>
+        <p>Ejemplo: const numberOfUnit: 54;</p>
+      </ul>
+      <h2>Ausencía de información técnica en los nombres</h2>
+      <p>Las clases o interfaces no deben tener expresiones técnicas</p>
+      <p>Ejemplo: AbstractUser (mal) - User (bien)</p>
+      <h2>Nombres según el tipo de datos</h2>
+      <h3>Arrays</h3>
+      <p>const fruit = ['manzana', 'pera'] (mal)</p>
+      <p>const fruitList = ['manzana', 'pera'] (regular)</p>
+      <p>const fruits = ['manzana', 'pera'] (bueno)</p>
+      <p>const fruitNames = ['manzana', 'pera'] (mejor)</p>
+      <h3>Booleans</h3>
+      <p>const fruits = ['manzana', 'pera'] (bueno)</p>
+      <p>const open = true (mal)</p>
+      <p>const isOpen = true (bien)</p>
+      <p>Utilizar, is, can, etc... utilizar verbos para ser más claros</p>
+      <h3>Numbers</h3>
+      <p>const cars = 10 (mal)</p>
+      <p>const totalOfCars = 5 (bien)</p>
+      <h3>Funciones</h3>
+      <p>createUserIfNotExist(); (mal)</p>
+      <p>createUser(); (bien)</p>
+      <p>La función o el método debe determinar si el usuario existe o no, y según el caso, crearlo o no, por lo tanto el "IfNotExist" no nos aporta nada.</p>
+      <h3>Clases</h3>
+      <ul>
+        <li>El nombre es lo más importante de una clase.</li>
+        <li>Formados por un sustantivo o frases de sustantivos.</li>
+        <li>No deben de ser muy genéricos.</li>
+        <li>Usar UpperCamelCase</li>
+      </ul>
+      <p>3 preguntas para determinar saber si es un buen nombre</p>
+      <ul>
+        <li>¿Qué exactamente hace la clase?</li>
+        <li>¿Cómo exactamente esta clase realiza cierta tarea?</li>
+        <li>¿Hay algo específico sobre su ubicación</li>
+      </ul>
+      <p>class Manager{}; (mal)</p>
+      <h3>Funciones</h3>
+      <p>Se recomienda no tener más de 3 parametros, pasar un objeto</p>
+      <h3>Otras recomendaciones</h3>
+      <ul>
+        <li>Simplicidad es fundamental</li>
+        <li>Funciones de tamaño reducido</li>
+        <li>Funciones de una sola línea sin causar complejidad</li>
+        <li>Funciones de menos de 20 líneas</li>
+        <li>Evita el uso del "else"</li>
+        <li>Prioriza el uso de la condicional ternaria</li>
+      </ul>
+      <hr>
+      <h2>Principio DRY</h2>
+      <ul>
+        <li>Simplemente es evitar tener duplicidad de código.</li>
+        <li>Simplifica las pruebas.</li>
+        <li>Ayuda a centralizar los procesos.</li>
+        <li>Aplicar el principio DRY, usualmente lleva a refactorizar.</li>
+      </ul>
+    </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
